@@ -66,6 +66,16 @@ def run_calman(name):
     plt.legend()
     plt.show()
 
+    fig, (ax1, ax2, ax3) = plt.subplots(3, sharex=True)
+    fig.suptitle('Dispersion x1,x2,x3')
+    ax1.plot(np.arange(t, t * (datalen + 1), t), P[:, 0, 0][:-1])
+    ax1.set_title("x1")
+    ax2.plot(np.arange(t, t * (datalen + 1), t), P[:, 1, 1][:-1])
+    ax2.set_title("x2")
+    ax3.plot(np.arange(t, t * (datalen + 1), t), P[:, 2, 2][:-1])
+    ax3.set_title("x3")
+    plt.show()
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
