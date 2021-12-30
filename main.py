@@ -1,15 +1,6 @@
 import math
-
 import numpy as np
-
 import matplotlib.pyplot as plt
-
-from pykalman import KalmanFilter
-
-
-# import pandas as pd
-# import matplotlib.pyplot as plt
-# import seaborn as sns
 
 
 def readExperimentalData(file_name: str) -> np.ndarray:
@@ -20,7 +11,7 @@ def readExperimentalData(file_name: str) -> np.ndarray:
         return np.asarray(lines)
 
 
-def run_calman(name):
+def run_calman():
     Q = pow(10, -4)
     R = 0.06 * 0.06
     J = 4.608 * pow(10, -7)
@@ -79,4 +70,4 @@ def run_calman(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    run_calman('PyCharm')
+    run_calman()
