@@ -58,9 +58,9 @@ def run_calman(name):
         P[ind + 1] = PHI.dot(P[ind]).dot(PHI.T) + Q
     print(x[0])
 
-    estimate_arr =x[0][:-1]
-    plt.plot(np.arange(0.001, 0.001 * (datalen + 1), 0.001), z[:], label="Z")
-    plt.plot(np.arange(0.001, 0.001 * (datalen + 1), 0.001), estimate_arr[:], label="Estimate")
+    estimate_arr = x[0][:-1]
+    plt.plot(np.arange(t, t * (datalen + 1), t), z[:], label="Z")
+    plt.plot(np.arange(t, t * (datalen + 1), t), estimate_arr[:], label="Estimate")
     plt.ylabel('angles')
     plt.xlabel('time')
     plt.legend()
